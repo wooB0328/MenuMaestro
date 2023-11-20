@@ -1,0 +1,162 @@
+/* 네비바 css */
+.nav-layout {
+  background-color: #2ccec9 !important;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Changed to center for vertical alignment */
+}
+
+.main-bg {
+  height: fit-content;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 10vh;
+  margin-top: 0;
+  align-items: center;
+  text-align: center;
+}
+
+.menumaestro {
+  float: left;
+  position: absolute;
+  left: 3vw;
+  top: -1.5vh;
+  font-family: 'Yeongdo-Rg';
+  font-weight: 400;
+  font-size: 9vh;
+  white-space: nowrap;
+  color: white;
+  text-align: center;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.nav-menu-image-container > a {
+  width: 7vw;
+  margin-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 400;
+  white-space:nowrap;
+  color: white;
+  font-size: 1vw; /* Responsive font size using rem */
+}
+
+.nav-menu-image {
+  width: 3vw;
+  margin-top: 0.5vh;
+}
+
+.me-auto {
+  position: absolute;
+  right: 0; /* Set the top value as needed */
+}
+
+/* 메인 홈페이지 CSS */
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
+}
+
+.godo * {
+ font-family: 'Godo', sans-serif;
+}
+@font-face {
+  font-family: 'Yeongdo-Rg';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Orbit-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KOTRA_GOTHIC';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/KOTRA_GOTHIC.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo{
+    animation: App-logo-spin 3s infinite linear;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.logo_frame {
+  position: absolute;
+  width: 12vw;
+  height: 12vw;
+  left: 50%;
+  margin-top: 1vh;
+  transform: translateX(-50%);
+  text-align: center;
+  background-image: url("https://i.ibb.co/ZKnsPMq/1.png");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.logo {
+  margin-top: 1.5vw;
+  width: 4vw;
+  height: 4vw;
+  overflow: auto;
+  text-align: center;
+  object-fit: cover;
+}
+
+.text_info {
+  position: relative;
+  top:14vw;
+  font-family: 'Orbit-Regular';
+  color: #000000;
+  font-size: 1.2vw;
+  text-align: center;
+  line-height: normal;
+  white-space:nowrap;
+}
+
+.info {
+  width: 45vw;
+  margin-top: 33vh;
+  object-fit: cover;
+}
+
+.memberinfo{
+  position: fixed;
+  left: 2vw;
+  bottom: 3%;
+  cursor: pointer;
+  width: 3.5vw;
+}

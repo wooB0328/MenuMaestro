@@ -1,0 +1,147 @@
+.cardlist {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+@font-face {
+  font-family: 'Noto Sans KR', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap');
+}
+
+#boardTable input {
+  width: 100%;
+  text-align: center;
+  min-height: 5vh;
+}
+
+#boardTable textarea {
+  width: 100%;
+  text-align: center;
+}
+
+#boardTable td {
+  text-align: center;
+  align-items: center;
+  width: 80vw;
+}
+#boardTable th {
+  text-align: center;
+  align-items: center;
+  font-size: 22px;
+  width: 10vw;
+}
+#boardTable {
+  border-collapse: separate;
+  border-spacing: 2vw 2vh; /* 3% of the viewport width and 3% of the viewport height */
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+#boardTable img {
+  width: 200px;
+  object-fit: cover;
+}
+
+.date_text{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  font-size: 5vh;
+  margin-bottom: 3vh;
+}
+
+hr {
+  height: 1px;
+  border-top: 4px dashed #2ccec9;
+  z-index: 200;
+  opacity: 1;
+}
+
+.board_modal{
+  position: absolute;
+  top:10vh;
+  background-color: #ffffff;
+  width: 50vw;
+  height: 40vw;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 10px #d3d3d3;
+  border-radius: 1vw;
+}
+.board_modal button {
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2ccec9;
+  color:#ffffff;
+  border: none;
+  width: 10vw;
+  height: fit-content;
+  font-size: 4vh;
+  border-radius: 0.5vw;
+  font-family: 'ELAND_Nice_M';
+}
+.board_modal img{
+  width: 20vw;
+  height: 20vw;
+  object-fit: cover;
+}
+.board_modal .board_modalText{
+  font-size: 6vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+}
+.board_modal span{
+  font-size: 4vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+}
+.board_modal p{
+  font-size: 3vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'ELAND_Nice_M';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Nice_M.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.reject_board {
+  cursor: pointer;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 10px;
+  right: 20px;
+}
+
+h1 {
+  font-family: 'KOTRA_GOTHIC';
+  font-size: 40px;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'KOTRA_GOTHIC';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/KOTRA_GOTHIC.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.card-center{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  font-size: 4vh;
+  width: 22vw;
+  border: 0.5vh #595959 solid;
+}
+.card-menu-image{
+  width: 18vw;
+  height: 18vw;
+  object-fit: cover;
+}

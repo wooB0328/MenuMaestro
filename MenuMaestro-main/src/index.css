@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Noto Sans KR', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap');
+}
+@font-face {
+  font-family: 'ELAND_Nice_M';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Nice_M.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  color: #595959;
+  height: 100vh;
+}
+
+.section_title{
+  overflow: auto;
+  transform: translateX(-50%);
+  left: 50%;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 8vh;
+  font-weight: 700;
+  color: #595959;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top:10vh;
+}
+
+.random-current-menu-image{
+  position:fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15vw;
+  height: 15vw;
+  margin-top:3vh;
+}
+.add-menu-form{
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20vh;
+}
+.add_button{
+  font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 500;
+        color:white;
+        background-color: #2ccec9;
+        border: none;
+        border-radius: 1vh;
+        font-size: 3.5vh;
+        white-space: nowrap;
+        float: right;
+        padding: 0 1vw;
+        margin-top: 1vh;
+}
+
+.today_image{
+  margin-bottom: -3vh;
+  width: 15vw;
+  height: 15vw;
+  object-fit: cover;
+}
+#randomModal .modal-content{
+  border-radius: 1vh;
+  width: 60vw;
+  height: 35vw;
+  min-height: 65vh;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  left: 50%;
+  top:50%;
+  position: fixed;
+  transform: translate(-50%,-50%);
+}
+.showToday{
+  border-spacing: 3vw;
+  border-collapse: separate;
+}
