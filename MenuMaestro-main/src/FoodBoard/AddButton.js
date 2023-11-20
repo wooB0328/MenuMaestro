@@ -73,10 +73,11 @@ const AddButton = function ({ onNewColor = f => f }) {
       <button className="ranking" onClick={openModal}>
         글쓰기
       </button>
-      <Modal isOpen={isModalOpen} onRequestClose={closeModal} id="boardModal">
+      <Modal isOpen={isModalOpen} onRequestClose={closeModal} className='board_modal'>
         <center>
-          <h1 style={{ textAlign: 'center' }}>글쓰기</h1>
-          <hr></hr>
+        <img className='reject_board' src="https://i.ibb.co/YZbWQM5/reject.png" onClick={closeModal} />
+          <div className='boardadd_modalText'>글쓰기</div>
+          <hr/>
           <table id="boardTable">
             <tbody>
               <tr>
@@ -127,8 +128,7 @@ const AddButton = function ({ onNewColor = f => f }) {
           </table>
           <div>
             <button onClick={handleSubmit}>업로드</button>
-            <img className='reject_board' src="https://i.ibb.co/YZbWQM5/reject.png" onClick={closeModal} />
-          </div>
+                      </div>
         </center>
       </Modal>
     </div>

@@ -72,7 +72,7 @@ const pickCurrentMenu = ({data, force}) => {
   }
 
   useEffect(() => {
-    setModalIsOpen(false);
+    setModalIsOpen(true);
   }, []);
 
 

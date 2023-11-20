@@ -48,7 +48,7 @@ function FoodBoard() {
         <div className="dotted-line" />
     </div>
     </center>
-    <div style = {{marginTop: '17vh'}}>
+    <div style = {{marginTop: '15vh'}}>
       <AddButton onNewColor={handleNewColor} />
       <DateList
         data={menus.sort((a, b) => new Date(b.date) - new Date(a.date))}

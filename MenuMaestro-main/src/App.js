@@ -178,9 +178,10 @@ function App() {
           </Modal.Header>
           <Modal.Body style={{top:'10vh',left:'50%',transform:'translateX(-50%)',position:'fixed', whiteSpace:'nowrap'}}>
             <table className='showToday'>
+              <tbody>
               <tr>
               {[0, 1, 2].map((index) => (
-          <td>
+          <td  key={index}>
             {menusCheck() !== -1 && (
               <img className='today_image' src={menus[ArraymenuIndex[index]].url} alt={`Menu ${index + 1}`} />
             )} 
@@ -189,7 +190,7 @@ function App() {
               </tr>
               <tr>
               {[0, 1, 2].map((index) => (
-          <td>
+          <td  key={index}>
             <center>
             {menusCheck() !== -1 && (
               <p style={{fontSize:'4vh', whiteSpace:'nowrap'}}>{menus[ArraymenuIndex[index]].name}</p>
@@ -198,10 +199,11 @@ function App() {
           </td>
         ))}
               </tr>
+              </tbody>
             </table>
           </Modal.Body>
           <Modal.Footer style={{fontSize:'4vh', position:'fixed',bottom:0,left:0, border:'none'}}>
-              <input type="checkbox" checked={handleCheckboxChange} onChange={handleClose} style={{ verticalAlign:'middle',width: '3vw', height: '3vw',marginRight:'1vw'}}/>
+          <input type="checkbox" checked={doNotShowToday} onChange={handleCheckboxChange} style={{ verticalAlign:'middle',width: '3vw', height: '3vw',marginRight:'1vw'}}/>
               <label>오늘 하루 보지 않음</label>
           </Modal.Footer>
         </Modal>

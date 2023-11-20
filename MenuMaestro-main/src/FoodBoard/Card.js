@@ -25,7 +25,7 @@ return (
           <Card.Text className="card_menu_text">{title}</Card.Text>
         </Card.Body>
       </Card>
-
+      <div className="board_card">
       <Modal className= "board_modal" isOpen={modalIsOpen} onRequestClose={closeModal}>
   <center>
     <div className="board_modalText">{title}</div>
@@ -33,12 +33,13 @@ return (
     <p>{detail.split('\n').map((item, key) => {
       return <span key={key}>{item}<br/></span>
     })}</p>
-    <p>{date}</p>
-    <img src={src} />
+    <p className="date_text">{date}</p>
+    <img src={src} className="card-menu-image"/>
     <br />
     <button onClick={closeModal}>닫기</button>
   </center>
 </Modal>
+</div>
             </center>
               </div>
               

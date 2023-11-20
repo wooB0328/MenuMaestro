@@ -6,8 +6,14 @@
   justify-content: space-between;
   align-items: center; /* Changed to center for vertical alignment */
 }
+@font-face {
+  font-family: 'Noto Sans KR', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap');
+}
 
 .main-bg {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
   height: fit-content;
   background-size: cover;
   background-position: center;

@@ -1,308 +1,308 @@
 @font-face {
-    font-family: 'Noto Sans KR', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap');
+  font-family: 'Noto Sans KR', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap');
 }
 
 @font-face {
-    font-family: 'ELAND_Nice_M';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Nice_M.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'ELAND_Nice_M';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Nice_M.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .worldcup_title {
-  position: absolute;
-  top:100px;
-  left: 50%;
-  transform: translateX(-50%);
-  overflow: auto;
-  font-family: 'KOTRA_GOTHIC';
-  font-size: 40px;
-  font-weight: 400;
-  color: #595959;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
+position: absolute;
+top:100px;
+left: 50%;
+transform: translateX(-50%);
+overflow: auto;
+font-family: 'KOTRA_GOTHIC';
+font-size: 40px;
+font-weight: 400;
+color: #595959;
+text-align: center;
+letter-spacing: 0;
+line-height: normal;
 
 }
 
 .Modal {
-    background-color: #ffffff;
-    z-index: 100;
-    position: fixed;
-    overflow: auto;
-    text-align: center;
-    align-items: center;
-    justify-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40vw;
-    height: 30vw;
-    box-shadow: 0px 0px 10px #d3d3d3;
-    border-radius: 1vw;
+  background-color: #ffffff;
+  z-index: 100;
+  position: fixed;
+  overflow: auto;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 30vw;
+  box-shadow: 0px 0px 1vw #d3d3d3;
+  border-radius: 1vw;
 }
 
 .overlap-group {
-  margin-left: auto;
-  margin-right: auto;
-    cursor: pointer;
-    align-items: center;
+margin-left: auto;
+margin-right: auto;
+  cursor: pointer;
+  align-items: center;
 }
 
 .rectangle {
-  margin-bottom: 1vh;
-    color: #ffffff;
-    font-size: 8vh;
-    text-align: center;
-    font-family: 'ELAND_Nice_M';
-    min-width: 12vw;
-    max-height: 12vh;
-    border: none;
-    background-color: #2ccec9;
-    border-radius: 0.5vw;
-    white-space: nowrap;
+margin-bottom: 1vh;
+  color: #ffffff;
+  font-size: 8vh;
+  text-align: center;
+  font-family: 'ELAND_Nice_M';
+  min-width: 12vw;
+  max-height: 12vh;
+  border: none;
+  background-color: #2ccec9;
+  border-radius: 0.5vw;
+  white-space: nowrap;
 }
 
 .text-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-    color: #ffffff;
-    font-size: 8vh;
-    text-align: center;
-    font-family: 'ELAND_Nice_M';
-    letter-spacing: 0;
+margin-left: auto;
+margin-right: auto;
+  color: #ffffff;
+  font-size: 8vh;
+  text-align: center;
+  font-family: 'ELAND_Nice_M';
+  letter-spacing: 0;
 }
 
 .reject {
-    cursor: pointer;
-    position: fixed;
-    width: 4vw;
-    top: 0.5vh;
-    right:0.5vw;
-    object-fit: cover;
+  cursor: pointer;
+  position: fixed;
+  width: 4vw;
+  top: 0.5vh;
+  right:0.5vw;
+  object-fit: cover;
 }
 .close {
-  cursor: pointer;
-  width: 3vw;
-  object-fit: cover;
-  right: 0.5vw;
-  top: 1vh;
-  position: absolute;
+cursor: pointer;
+width: 3vw;
+object-fit: cover;
+right: 0.5vw;
+top: 1vh;
+position: absolute;
 }
 .recommend_text{
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 2.5vw;
-  font-weight: 500;
-  color: #595959;
-  white-space: nowrap;
+font-family: 'Noto Sans KR', sans-serif;
+font-size: 2.5vw;
+font-weight: 500;
+color: #595959;
+white-space: nowrap;
 }
 .go_back{
-    cursor: pointer;
-    margin-left:2vw;
-    margin-top: 3vh;
-    width: 4vw;
+  cursor: pointer;
+  margin-left:2vw;
+  margin-top: 3vh;
+  width: 4vw;
 }
 .modal_title{
-    margin-top: 8vw;
-    text-align: center;
-    color: #000000;
-    font-size: 7vw;
-    white-space: nowrap;
-    font-family: 'ELAND_Nice_M';
-    letter-spacing: 0;
-    line-height: normal;
+  margin-top: 8vw;
+  text-align: center;
+  color: #000000;
+  font-size: 7vw;
+  white-space: nowrap;
+  font-family: 'ELAND_Nice_M';
+  letter-spacing: 0;
+  line-height: normal;
 }
 /*화면*/
 .worldcup_frame{
-    position: relative;
-    top: 49vh;
-    transform: translateY(-50%);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 20vw;
-    -webkit-box-pack: justify;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
+  position: relative;
+  top: 49vh;
+  transform: translateY(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20vw;
+  -webkit-box-pack: justify;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 .card_frame{
-    position: relative;
-    top:45vh;
-    transform: translateY(-50%);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 20vw;
-    -webkit-box-pack: justify;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
+  position: relative;
+  top:45vh;
+  transform: translateY(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20vw;
+  -webkit-box-pack: justify;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 .card_card{
-    overflow: hidden;
-    flex-basis: auto;
-    align-items: center;
-    text-align: center;
-    width:20vw;
-    border: 0.3vw solid;
-    border-radius: 1vw;
-    border-color: #5d5a5a;
-    background-color: #ffffff;
-    z-index: 10;
+  overflow: hidden;
+  flex-basis: auto;
+  align-items: center;
+  text-align: center;
+  width:20vw;
+  border: 0.3vw solid;
+  border-radius: 1vw;
+  border-color: #5d5a5a;
+  background-color: #ffffff;
+  z-index: 10;
 }
 
 .card_card .card_image{
-   width: 15vw;
-   height: 15vw;
-   object-fit: cover;
-   margin-top: 3vh;
+ width: 15vw;
+ height: 15vw;
+ object-fit: cover;
+ margin-top: 3vh;
 
 }
 
 .card_card .card_text{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 2.5vw;
-    font-weight: 500;
-    color: #595959;
-    letter-spacing: 0;
-    line-height: normal;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-top: 0.8vh;
-    margin-bottom: 2vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 2.5vw;
+  font-weight: 500;
+  color: #595959;
+  letter-spacing: 0;
+  line-height: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 0.8vh;
+  margin-bottom: 2vh;
 }
 
 
 .vs {
-    position: absolute;
-    font-family: 'ELAND_Nice_M';
-    top: 15vh;
-    color: #595959;
-    font-size: 10vw;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-    z-index: -1;
+  position: absolute;
+  font-family: 'ELAND_Nice_M';
+  top: 15vh;
+  color: #595959;
+  font-size: 10vw;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  z-index: -1;
 }
 
 .worldcup_round{
-    transform: translateX(-50%);
-    position: fixed;
-    left: 50%;
-    top:32vh;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 9vh;
-    font-weight: 700;
-    z-index: -1;
+  transform: translateX(-50%);
+  position: fixed;
+  left: 50%;
+  top:32vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 9vh;
+  font-weight: 700;
+  z-index: -1;
 
 }
 @font-face {
-    font-family: 'PyeongChangPeace-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'PyeongChangPeace-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }
 .worldcup_finalround{
-    position:fixed;
-    color: red;
-    top:23vh;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'PyeongChangPeace-Bold';
-    font-size: 8vh;
-    font-weight: 700;
-    z-index: -1;
+  position:fixed;
+  color: red;
+  top:23vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'PyeongChangPeace-Bold';
+  font-size: 8vh;
+  font-weight: 700;
+  z-index: -1;
 }
-  .dotted-line-container{
-    left: 50%;
-    transform: translateX(-50%);
-    width: 34vw;
-    position: absolute;
-    top: 22vh;
-    display: flex;
-    justify-content: flex-start;
-  }
-  .dotted-line-container .dotted-line{
-    position: absolute;
-    left: 50%;
-    width: 20vw;
-    transform: translateX(-50%);
-    border-top: dashed 0.7vh #2ccec9; /* 1px width, dotted style, and black color */
-  }
-  .reset{
-    width: 3vw;
-    height: 3vw;
-    margin-top: 1vh;
-    margin-left: 28vw;
-    cursor: pointer;
-  }
-    .ranking{
-        z-index: 10000;
-        padding:0vh 1vw;
-        bottom:5vh;
-        position: fixed;
-        right:2vw;
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 500;
-        color:white;
-        background-color: #2ccec9;
-        border: none;
-        border-radius: 1vh;
-        font-size: 5vh;
-        white-space: nowrap;
-    }
-  
-  .random-menu-description {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 500;
-    align-items: center;
-    font-size: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: normal;
-    white-space: nowrap;
-    position: fixed;
-    overflow: auto;
-    bottom: 4vh;
-  }
-  .vote{
-    width: 3vw;
-    cursor: pointer;
-  }
-  .member_table{
-    margin-top: 15vh;
-    border-collapse: separate;
-    border-spacing: 2vw 5vh;
-  }
-  .members{
-    width: 25vw;
-    
+.dotted-line-container{
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34vw;
+  position: absolute;
+  top: 22vh;
+  display: flex;
+  justify-content: flex-start;
+}
+.dotted-line-container .dotted-line{
+  position: absolute;
+  left: 50%;
+  width: 20vw;
+  transform: translateX(-50%);
+  border-top: dashed 0.7vh #2ccec9; /* 1px width, dotted style, and black color */
+}
+.reset{
+  width: 3vw;
+  height: 3vw;
+  margin-top: 1vh;
+  margin-left: 28vw;
+  cursor: pointer;
+}
+  .ranking{
+      z-index: 10000;
+      padding:0vh 1vw;
+      bottom:5vh;
+      position: fixed;
+      right:2vw;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 500;
+      color:white;
+      background-color: #2ccec9;
+      border: none;
+      border-radius: 1vh;
+      font-size: 5vh;
+      white-space: nowrap;
   }
 
-  .rank_table {
-    font-family: 'Noto Sans KR', sans-serif;
-    width: 30vw;
-    margin-left:auto;
-    margin-right:auto;
-    text-align: center;
-    font-size: 3vh;
-    height:auto;
-    white-space: nowrap;
-    border-collapse: collapse;
-  }
+.random-menu-description {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  align-items: center;
+  font-size: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: normal;
+  white-space: nowrap;
+  position: fixed;
+  overflow: auto;
+  bottom: 4vh;
+}
+.vote{
+  width: 3vw;
+  cursor: pointer;
+}
+.member_table{
+  margin-top: 15vh;
+  border-collapse: separate;
+  border-spacing: 2vw 5vh;
+}
+.members{
+  width: 25vw;
   
-  .rank_table th, .rank_table td {
-    border: 0.3vw solid #595959;
-  }
-  .rank_table th{
-    min-width: 5vw;
-  }
-  thead{
-    background-color: #2ccec9;
-    color: white;
-    font-size: 2vw;
-    height: 8vh;
-    font-weight: 500;
-  }
+}
+
+.rank_table {
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 30vw;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  font-size: 3vh;
+  height:auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+
+.rank_table th, .rank_table td {
+  border: 0.3vw solid #595959;
+}
+.rank_table th{
+  min-width: 5vw;
+}
+thead{
+  background-color: #2ccec9;
+  color: white;
+  font-size: 2vw;
+  height: 8vh;
+  font-weight: 500;
+}

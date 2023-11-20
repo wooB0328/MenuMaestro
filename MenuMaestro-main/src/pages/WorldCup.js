@@ -26,23 +26,25 @@ const WorldCup = () => {
   
       if (currentCountSnapshot.exists()) {
         const currentCount = currentCountSnapshot.val();
-        
+  
         // 객체 내에 'count' 필드가 있으면 증가시킴
         if (typeof currentCount === 'object' && 'count' in currentCount) {
-          await set(startCountsRef, { ...currentCount, count: currentCount.count + 1 });
+          await update(startCountsRef, { ...currentCount, count: currentCount.count + 1 });
         } else {
           // 'count' 필드가 없으면 1로 초기화
           await set(startCountsRef, { count: 1 });
         }
+        console.log("Firebase에 정상적으로 startCounts가 업데이트 되었습니다.");
       } else {
         // 'startCounts' 필드가 없으면 1로 초기화
         await set(startCountsRef, { count: 1 });
+        console.log("Firebase에 정상적으로 startCounts가 생성 및 초기화 되었습니다.");
       }
-      console.log("Firebase에 정상적으로 startCounts가 업데이트 되었습니다.");
     } catch (error) {
       console.error("전체 플레이 횟수 갱신 중:", error);
     }
   };
+  
 
   const finalWinner = async (team) => {
     try {

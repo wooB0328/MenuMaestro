@@ -1,67 +1,105 @@
 /* category.css (추가 또는 수정) */
 .lists-container {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 500;
-    margin-top: 20vh;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    position: fixed;
-    gap: 0 10vw;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .category-list,
-  .subcategory-list {
-    flex: 1;
-    list-style: none;
-  }
-
-  .category-list ul,
-  .subcategory-list ul{
-    width: 30vw;
-    border: 0.3vh solid #333;
-    border-radius: 10px;
-    list-style: none;
-    padding-left: 0;
-
-  }
-  
-
-  .category-list li,
-  .subcategory-list li {
-    width: 30vw;
-    font-size: 5vh;
-    cursor: pointer;
-    list-style: none;
-    margin: 0;
-  padding: 0;
-  }
-  .category-list li:not(:last-child),
-  .subcategory-list li:not(:last-child) {
-  border-bottom: 0.3vh dashed #333;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  margin-top: 20vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  gap: 0 10vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.category-list li.selected,
-.subcategory-list li.selected {
-    background-color: #2ccec9;
-    color: #fff;
-    border-radius: 1vh;
-    width: 29.8vw;
+
+
+.first_category{
+  width: 30.2vw;
+  max-height: 38.9vh;
+  border: 0.3vh solid #595959;
+  border-radius: 1vw;
+  list-style: none;
+  padding-left: 0;
+}
+.second_category{
+  width: 30.2vw;
+  border: 0.3vh solid #595959;
+  border-radius: 1vw;
+  list-style: none;
+  padding-left: 0;
+}
+
+
+.lists-container li{
+  width: 30vw;
+  font-size: 5vh;
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lists-container li:not(:last-child) {
+  border-bottom: 0.3vh dashed #595959;
+}
+
+.lists-container li.selected{
+    background-color: #2ccec9 !important;
+    color: #fff !important;
+    border-radius: 0.7vw !important;
 }
 
 .recommend_card{
-    align-items: center;
-    text-align: center;
-    width:25vw;
-    top:20vh;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
+  align-items: center;
+  text-align: center;
+  width:25vw;
+  top:20vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
 }
 .recommend_image{
-    width: 18vw;
-    height: 18vw;
-    object-fit: cover;
-    margin-top: 3vh;
+  width: 18vw;
+  height: 18vw;
+  object-fit: cover;
+  margin-top: 3vh;
+}
+
+.foodModal{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  width: 40vw;
+  background-color: #fff;
+  top:50%;
+  left: 50%;
+  justify-items: center;
+  text-align: center;
+  position: relative;
+  transform: translate(-50%,-50%);
+  box-shadow: 0px 0px 1vw #d3d3d3;
+  border-radius: 1vw;
+}
+
+.foodModal .card-image{
+  width: 25vw;
+  height: 25vw;
+  margin-top: 5vh;
+  object-fit: cover;
+}
+.foodModal .card_text{
+  margin-top: 5vh;
+  font-size: 5vh;
+  font-weight: 700;
+}
+.foodModal .menu-description{
+  margin-top: 3vh;
+  font-size: 3vh;
+  padding-bottom: 5vh;
+}
+.foodModal .vote{
+  width: 2.5vw;
+}
+.foodModal .reject{
+  width: 3vw;
+  margin-top: 1vh;
 }

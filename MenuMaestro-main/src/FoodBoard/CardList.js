@@ -35,7 +35,6 @@ const CardList = ({ data = []}) => {
         <div className="date_text">{data[0].date}</div>
       </center>
       <Slider {...settings}>
-        
         {data.map((n, i) => (
           <FoodCard title={n.title} src={n.src} detail={n.detail} date={n.date} key={i} />
         ))}

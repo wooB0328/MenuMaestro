@@ -48,6 +48,8 @@ code {
   margin-top:3vh;
 }
 .add-menu-form{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
   width: 40vw;
   margin-left: auto;
   margin-right: auto;
