@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { ref, get, set, child, update } from 'firebase/database';
+import { ref, get, update } from 'firebase/database';
 import { useDatabase } from '../contexts';
 import { getToday, getTodayReadable } from '../utils';
 
