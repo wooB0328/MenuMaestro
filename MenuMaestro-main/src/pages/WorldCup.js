@@ -4,7 +4,7 @@ import { useDatabase } from '../contexts';
 import '../css/worldcup.css';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
-import {isEqual, getToday, getTodayReadable} from '../utils';
+import {getToday, getTodayReadable} from '../utils';
 
 
 
@@ -231,7 +231,7 @@ const WorldCup = () => {
       <h1 className="section_title">월드컵</h1>
       <div className="dotted-line-container">
         <div className="dotted-line" />
-        <img className = 'reset' src="https://i.ibb.co/yRggpzD/reset.png" onClick={handleResetClick}/>
+        <img className = 'reset' src="https://i.ibb.co/yRggpzD/reset.png" alt="reset" onClick={handleResetClick}/>
       </div>
       <Link to ="/WorldRank">
         <button className="ranking" >전체 순위</button>
@@ -283,7 +283,7 @@ const WorldCup = () => {
   )}
 <p className="random-menu-description">
   오늘({getTodayReadable()}) {winningTeamData ? winningTeamData.vote : null}회의 추천을 받았습니다 &nbsp;
-  <img className={`vote ${isVoteClicked ? 'disabled' : ''}`}src="https://i.ibb.co/4VXmN4x/like-1.png" 
+  <img className={`vote ${isVoteClicked ? 'disabled' : ''}`}src="https://i.ibb.co/4VXmN4x/like-1.png" alt="vote"
   onClick={upVote} />
 </p>
 

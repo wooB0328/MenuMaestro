@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/memberinfo.css'
 function MemberInfo(){
     return (
       <div className='box'>

@@ -1,13 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 
+import Cookies from 'js-cookie';
 // 상단 메뉴바 코드 
 import { Navbar, Nav, Container, Modal } from 'react-bootstrap';
 
 // 페이지 나누는 라우터 라이브러리와 모달
 import {Routes, Route,  useNavigate  } from 'react-router-dom'
 
-import { ref, get, child, getDatabase } from 'firebase/database';
+import { ref, get, getDatabase } from 'firebase/database';
 
 // 각 페이지 컴포넌트
 import RandomPick from './pages/RandomPick';
@@ -17,7 +17,7 @@ import WorldCup from './pages/WorldCup';
 import MenuAdd from './pages/MenuAdd';
 import MemberInfo from './pages/MemberInfo';
 
-import { useState, useDatabase, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { DatabaseProvider } from './contexts';
 import WorldRank from './pages/WorldRank';
 
@@ -68,12 +68,18 @@ function App() {
   const handleClose = () => {
     setDoNotShowToday(true);
     setShowModal(false);
-    localStorage.setItem('lastClosedTime', new Date().getTime().toString());
+    
+    // 모달이 닫힐 때마다 lastClosedTime 값을 업데이트
+    const currentTime = new Date().getTime();
+    Cookies.set('lastClosedTime', currentTime.toString(), { expires: 1 }); // 1일 동안 유효
+  
+    // 갱신된 쿠키를 바로 반영하기 위해 새로고침
+    window.location.reload();
   };
-
-  const handleCheckboxChange = () => {
+  
+  const closeclick = () => {
+    handleClose();
     setDoNotShowToday(!doNotShowToday);
-
   };
 
   let menusCheck = () => {  //menus가 null값인지 확인하는 오류검사 코드
@@ -105,21 +111,21 @@ function App() {
 
   //이 부분 있으면 하룻동안 모달창 안뜸.
   useEffect(() => {
-    const lastClosedTimeString = localStorage.getItem('lastClosedTime');
+    const lastClosedTimeString = Cookies.get('lastClosedTime');
     if (lastClosedTimeString) {
       const lastClosedTimeValue = parseInt(lastClosedTimeString, 10);
       const currentTime = new Date().getTime();
       const timeDifference = currentTime - lastClosedTimeValue;
   
-      const timeInterval = 1; // 10 * 1000;   // 시간 ms
-  
+      const timeInterval = 60 * 60 * 24 * 1000; // 24시간
+
       if (timeDifference < timeInterval && !doNotShowToday) {
         setShowModal(false);
       } else {
         setShowModal(true);
       }
     }
-  }, []);
+  }, [doNotShowToday]);
 
   return (
     <DatabaseProvider>
@@ -167,7 +173,7 @@ function App() {
             </Nav>
           </Container>
         </Navbar> 
-        <img className='memberinfo'title="운영 단원 소개"
+        <img className='memberinfo'title="운영 단원 소개" alt='member'
           onClick={()=> {navigate('/MemberInfo')}}
           src="https://i.ibb.co/qWjYTwK/info-button-1.png"
         />
@@ -203,9 +209,11 @@ function App() {
             </table>
           </Modal.Body>
           <Modal.Footer style={{fontSize:'4vh', position:'fixed',bottom:0,left:0, border:'none'}}>
-          <input type="checkbox" checked={doNotShowToday} onChange={handleCheckboxChange} style={{ verticalAlign:'middle',width: '3vw', height: '3vw',marginRight:'1vw'}}/>
-              <label>오늘 하루 보지 않음</label>
-          </Modal.Footer>
+              <div onClick={closeclick}>
+              <input type="checkbox" onChange ={closeclick} style={{cursor:'pointer',verticalAlign: "middle", width: "3vw", height: "3vw", marginRight: "1vw" }} />
+                <label style={{cursor:'pointer'}}>오늘 하루 보지 않음</label>
+                </div>
+                         </Modal.Footer>
         </Modal>
         </div>
         <Routes>
