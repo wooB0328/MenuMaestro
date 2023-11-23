@@ -10,18 +10,18 @@ function MemberInfo(){
           <tbody>
           <tr>
             <td>
-              <img className="members" src="https://i.ibb.co/PNf15Ms/1.png" />
+              <img alt='members' className="members" src="https://i.ibb.co/PNf15Ms/1.png" />
             </td>
             <td>
-              <img className="members" src="https://i.ibb.co/QdBd2fP/2.png" />
+              <img alt='members' className="members" src="https://i.ibb.co/QdBd2fP/2.png" />
             </td>
           </tr>
           <tr>
             <td>
-            <img className="members" src="https://i.ibb.co/bz4QmRX/3.png" />
+            <img alt='members' className="members" src="https://i.ibb.co/bz4QmRX/3.png" />
             </td>
             <td>
-            <img className="members" src="https://i.ibb.co/C2kh6MQ/4.png" />
+            <img alt='members' className="members" src="https://i.ibb.co/C2kh6MQ/4.png" />
             </td>
           </tr>
           </tbody>

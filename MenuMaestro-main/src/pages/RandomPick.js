@@ -3,13 +3,13 @@ import { useState, useRef, useEffect } from 'react';
 import '../index.css'
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
-import { getDatabase, ref, set, update } from "firebase/database";
+import {ref, set} from "firebase/database";
 import { useDatabase } from '../contexts';
 import { onValue } from "firebase/database";
 import {isEqual, getToday, getTodayReadable} from '../utils';
 Modal.setAppElement('#root');
 
-function RandomRick({ userPick, setUserPick }) {
+function RandomRick() {
   const {database} = useDatabase();
   const newMenuRef = ref(database, 'menus');
   const [menus, setMenus] = useState([]);
@@ -85,7 +85,7 @@ const pickCurrentMenu = ({data, force}) => {
         <div className = "modal_title">랜덤</div>
         <button className = "rectangle" onClick={closeModal}>시작</button>
         <Link to = "/">
-        <img className='reject' src = "https://i.ibb.co/YZbWQM5/reject.png"></img>
+        <img className='reject' src = "https://i.ibb.co/YZbWQM5/reject.png" alt='reject'></img>
         </Link>
     </Modal>
       <h1 className='section_title'>랜덤</h1>
@@ -103,7 +103,7 @@ const pickCurrentMenu = ({data, force}) => {
       </div>
       <p className="random-menu-description">
         오늘({getTodayReadable()}) {currentMenu.vote}회의 추천을 받았습니다 &nbsp;
-        <img className= 'vote' src = "https://i.ibb.co/4VXmN4x/like-1.png" width={"40px"} onClick={upvote}/>
+        <img className= 'vote' src = "https://i.ibb.co/4VXmN4x/like-1.png" alt="vote" onClick={upvote}/>
       </p>
     </>
   );

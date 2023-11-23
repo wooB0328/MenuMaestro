@@ -36,9 +36,9 @@ function MenuReCommend() {
         const snapshot = await get(dbRef);
         if (snapshot.exists()) {
           const data = snapshot.val();
-          setMenus(data);
-          setCategoryMenus(data);
-        }
+            setMenus(data);
+            setCategoryMenus(data);
+                  }
       } catch (error) {
         console.error('Error fetching menus:', error);
       }
@@ -82,6 +82,7 @@ function MenuReCommend() {
       console.error('Error fetching menus:', error);
     }
   };
+  
   
 
   useEffect(() => {
@@ -134,7 +135,14 @@ function MenuReCommend() {
           const snapshot = await get(menuRef);
           if (snapshot.exists()) {
             const menuData = snapshot.val();
-            setModalMenu(menuData);
+            if(getToday() !== menuData.lastVote){
+              setModalMenu({
+                ...menuData,
+                vote: 0,
+              });
+            }
+            else{
+            setModalMenu(menuData);}
           }
         } catch (error) {
           console.error('Error fetching menu data:', error);
@@ -165,8 +173,18 @@ function MenuReCommend() {
     if (temp.length > 0) {
       const randomIndex = Math.floor(Math.random() * temp.length);
       const randomMenu = temp[randomIndex];
-      setFinalMenu(randomMenu);
+      if(getToday() !== randomMenu.lastVote){
+        setFinalMenu({
+          ...randomMenu,
+          vote: 0,
+        });
+
+      }
+      else{
+        setFinalMenu(randomMenu);
+      }
       openModal(randomMenu);
+      console.log(randomMenu);
     } else {
       setFinalMenu(null);
     }
@@ -229,23 +247,33 @@ function MenuReCommend() {
           const snapshot = await get(menuRef);
           if (snapshot.exists()) {
             const updatedMenuData = snapshot.val();
-            setFinalMenu(updatedMenuData);
+            if(getToday()!== updatedMenuData.lastVote){
+              setFinalMenu({
+                ...updatedMenuData,
+                vote: 0,
+              });
+              console.log(finalMenu);
+            }
+            else{
+              setFinalMenu(updatedMenuData);
+            }
           }
         } catch (error) {
-          console.error('Error fetching updated menu data:', error);
+          console.error('메뉴 데이터 가져오는 중 오류 발생:', error);
         }
       };
-
+  
       fetchUpdatedMenuData();
     }
   }, [finalMenu, database]);
+  
 
   return (
     <div className="recommend">
       <div className="section_title">메뉴 추천</div>
       <div className="dotted-line-container">
         <div className="dotted-line" />
-        <img
+        <img alt='reset'
           className="reset"
           src="https://i.ibb.co/yRggpzD/reset.png"
           onClick={handleResetClick}
@@ -294,7 +322,7 @@ function MenuReCommend() {
               <p className="menu-description">
                 오늘({getTodayReadable()}) {finalMenu.vote}회의 추천을 받았습니다. &nbsp;
                 {!votedMenus[finalMenu.name] && (
-                  <img
+                  <img alt='vote'
                     className="vote"
                     src="https://i.ibb.co/4VXmN4x/like-1.png"
                     onClick={() => upvote()}

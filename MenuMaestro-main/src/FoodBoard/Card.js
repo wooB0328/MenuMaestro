@@ -34,7 +34,7 @@ return (
       return <span key={key}>{item}<br/></span>
     })}</p>
     <p className="date_text">{date}</p>
-    <img src={src} className="card-menu-image"/>
+    <img src={src} className="card-menu-image" alt="card"/>
     <br />
     <button onClick={closeModal}>닫기</button>
   </center>

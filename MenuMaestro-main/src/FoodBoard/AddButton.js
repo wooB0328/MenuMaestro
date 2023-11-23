@@ -46,6 +46,10 @@ const AddButton = function ({ onNewColor = f => f }) {
   };
 
   const handleSubmit = async () => {
+    if(!titleValue){
+      alert("제목을 입력하세요!");
+      return;
+    }
     let URL = await uploadImage();
     console.log("사진 업로드 끝. url 얻어옴. URL = " + URL);
     onNewColor(titleValue, detailValue, dateValue, URL);
@@ -75,18 +79,18 @@ const AddButton = function ({ onNewColor = f => f }) {
       </button>
       <Modal isOpen={isModalOpen} onRequestClose={closeModal} className='board_modal'>
         <center>
-        <img className='reject_board' src="https://i.ibb.co/YZbWQM5/reject.png" onClick={closeModal} />
+        <img className='reject_board' src="https://i.ibb.co/YZbWQM5/reject.png" onClick={closeModal} alt='reject'/>
           <div className='boardadd_modalText'>글쓰기</div>
           <hr/>
           <table id="boardTable">
             <tbody>
               <tr>
-                <th>메뉴 이름 *</th>
+                <th>제목 *</th>
                 <td>
                   <input
                     id="title"
                     type="text"
-                    placeholder="메뉴 이름을 적어주세요."
+                    placeholder="제목을 입력하세요."
                     value={titleValue}
                     onChange={handleTitleChange}
                   />
