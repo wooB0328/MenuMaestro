@@ -25,8 +25,10 @@ const AddButton = function ({ onNewColor = f => f }) {
       const imageUrl = await getDownloadURL(storageRef);
       return imageUrl;
     }
-    else{
-      console.log("파일이 재대로 전달되지 않음.")
+    else {
+      console.log("파일이 전달되지 않음.");
+      //alert("이미지를 업로드해주세요.");
+      return null;
     }
   };
 
@@ -46,11 +48,9 @@ const AddButton = function ({ onNewColor = f => f }) {
   };
 
   const handleSubmit = async () => {
-    if(!titleValue){
-      alert("제목을 입력하세요!");
-      return;
-    }
+
     let URL = await uploadImage();
+    if(URL && titleValue && detailValue){
     console.log("사진 업로드 끝. url 얻어옴. URL = " + URL);
     onNewColor(titleValue, detailValue, dateValue, URL);
     console.log("OnNewColor에 집어넣음. ");
@@ -58,6 +58,10 @@ const AddButton = function ({ onNewColor = f => f }) {
     setDetailValue("");
     setDateValue("");
     closeModal();
+    }
+    else{
+      alert("빈 칸 없이 입력해주세요.");
+    }
   };
 
   const handleTitleChange = (e) => {
@@ -79,18 +83,18 @@ const AddButton = function ({ onNewColor = f => f }) {
       </button>
       <Modal isOpen={isModalOpen} onRequestClose={closeModal} className='board_modal'>
         <center>
-        <img className='reject_board' src="https://i.ibb.co/YZbWQM5/reject.png" onClick={closeModal} alt='reject'/>
+        <img className='reject_board' src="https://i.ibb.co/YZbWQM5/reject.png" onClick={closeModal} />
           <div className='boardadd_modalText'>글쓰기</div>
           <hr/>
           <table id="boardTable">
             <tbody>
               <tr>
-                <th>제목 *</th>
+                <th>메뉴 이름 *</th>
                 <td>
                   <input
                     id="title"
                     type="text"
-                    placeholder="제목을 입력하세요."
+                    placeholder="메뉴 이름을 적어주세요."
                     value={titleValue}
                     onChange={handleTitleChange}
                   />
